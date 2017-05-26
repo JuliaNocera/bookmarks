@@ -6,7 +6,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 //import { destroyAllAccountListeners } from '../firebase/firebaseDataInitialization'
 
-import LoginContainer from '../containers/Login'
+import LoginContainer from '../containers/LoginContainer'
 
 const persistURL = (routerData) => {
   const URL = routerData.location.pathname
@@ -16,7 +16,7 @@ const persistURL = (routerData) => {
 
 const persistURLAndDestroyAccountListeners = (routerData) => {
   persistURL(routerData)
-  destroyAllAccountListeners()
+//  destroyAllAccountListeners()
 }
 
 injectTapEventPlugin()
