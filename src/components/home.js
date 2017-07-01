@@ -4,7 +4,7 @@ const Home = props => (
   <div>
     <h1>Home</h1>
     <p>Someday we will log in here!</p>
-    <button onClick={ () => props.changePage() }> Go to about page via redux</button>
+    <button onClick={ () => props.changePage('/about') }> Go to about page via redux</button>
   </div>
 )
 

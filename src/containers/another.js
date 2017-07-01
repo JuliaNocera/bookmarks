@@ -1,9 +1,10 @@
 import React from 'react'
+import { push } from 'react-router-redux'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { changePage } from '../helpers/navigation'
-import Home from '../components/home'
+import Another from '../components/another'
 
 const mapDispatchToProps = dispatch => bindActionCreators({
   changePage: (path) => changePage(path)
@@ -11,5 +12,5 @@ const mapDispatchToProps = dispatch => bindActionCreators({
 
 export default connect(
   null,
-  mapDispatchToProps
-)(Home)
+  mapDispatchToProps  
+)(Another)
