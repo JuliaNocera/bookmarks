@@ -6,7 +6,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
 import store, { history } from './store'
-import App from './containers/app/app'
+import App from './appContainer'
 import './index.css';
 
 const target = document.querySelector('#root')
