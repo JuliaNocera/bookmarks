@@ -1,8 +1,7 @@
-import React from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { signOut } from './firebase/authentication'
+import { signOut } from '../firebase/authentication'
 import App from './app'
 
 const mapDispatchToProps = dispatch => bindActionCreators({

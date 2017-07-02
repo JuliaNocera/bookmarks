@@ -3,6 +3,11 @@ export const updateActiveUser = (userData) => ({
   userData
 })
 
+export const updateActiveAccount = (accountData) => ({
+  type: 'UPDATE_ACTIVE_ACCOUNT',
+  accountData
+})
+
 export const clearStore = () => ({
   type: 'CLEAR_STORE'
 })

@@ -3,8 +3,16 @@ import { connect } from 'react-redux'
 import { SubmissionError } from 'redux-form'
 
 //import { updateActiveUser } from '../actions'
-import { getUserData, listenToUserData } from '../firebase/database'
-import { signIn, setupAuthListener  } from '../firebase/authentication'
+import { 
+  getUserData, 
+  getAccountData, 
+  listenToUserData 
+} from '../firebase/database'
+
+import { 
+  signIn, 
+  setupAuthListener  
+} from '../firebase/authentication'
 
 import Home from '../containers/homeContainer'
 import LoginForm from '../forms/LoginForm'
@@ -16,13 +24,18 @@ class Login extends Component {
   }
 
   authHandler(userData) {
-    const { updateActiveUser } = this.props
+    const { updateActiveUser, updateActiveAccount } = this.props
     getUserData(userData.uid)
       .then((userDocument) => {
         let userDocWithId = userDocument.val()
         userDocWithId.uid = userData.uid
         updateActiveUser(userDocWithId)
         listenToUserData(userData.uid, updateActiveUser)
+        getAccountData(userDocWithId.account)
+          .then((accountDocument) => {
+            updateActiveAccount(accountDocument.val())
+            //listenToAccountData(userDocument.account, updateActiveAccount)
+          })
       })
   }
 

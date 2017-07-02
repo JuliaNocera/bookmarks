@@ -5,9 +5,8 @@ import { ConnectedRouter } from 'react-router-redux'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
-import store, { history } from './store'
-import App from './appContainer'
-import './index.css';
+import store, { history } from './app/store'
+import App from './app/appContainer'
 
 const target = document.querySelector('#root')
 

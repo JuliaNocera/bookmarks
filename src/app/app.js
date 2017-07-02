@@ -1,10 +1,10 @@
 import React from 'react'
 import { Route, Link } from 'react-router-dom'
 
-import Home from './containers/homeContainer'
-import Login from './containers/loginContainer'
-import About from './components/about'
-import Another from './containers/anotherContainer'
+import Home from '../containers/homeContainer'
+import Login from '../containers/loginContainer'
+import About from '../components/about'
+import Another from '../containers/anotherContainer'
 
 const App = ({
   signOut,
